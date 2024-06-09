@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import useProfile from '../../hooks/useProfile';
+import React from 'react';
 
 
 const ChangePassword = () => {

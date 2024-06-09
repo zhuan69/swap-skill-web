@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import cardsData from '../datadummy/cardsDataRecomen';
+import { useQueries, useQuery } from 'react-query';
+import { userRecomendation } from '../../services/Recomendation';
 
 const CardRecomenHome = () => {
+
+   
+
     return (
         <>
             <div className='relative top-[180px]'>
@@ -34,7 +39,7 @@ const CardRecomenHome = () => {
                                     <img
                                         className="w-[150px] h-[150px] mb-3"
                                         src={card.imageUrl}
-                                        alt={`Card ${card.id} image`}
+                                        alt={`Card ${card.id} `}
                                     />
                                     <h5 className="mb-1 text-xl font-medium text-gray-900">
                                         {card.title}

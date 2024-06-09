@@ -1,10 +1,11 @@
+import React from 'react';
 
 const CardImageHome = () => {
     return (
         <>
             <div className='flex justify-center items-center mt-10 bg-white rounded-2xl shadow-2xl'>
                 <div className='w-[700px]'>
-                    <img src="/home.png" alt="image" className='' />
+                    <img src="/home.png" alt="home" className='' />
                 </div>
                 <div className='w-[400px] font-bold'>
                     <h1 className=' text-3xl'>You can swap skill for free</h1>

@@ -2,6 +2,7 @@ import { BsChevronLeft } from 'react-icons/bs';
 import Back from '../../components/button/Back';
 import CardData from '../../components/card/CardSwapRecomen'
 import GlobalLayout from '../../layouts/GlobalLayout';
+import React from 'react';
 
 const SwapRecomendation = () => {
     return (

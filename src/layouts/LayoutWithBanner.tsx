@@ -1,3 +1,4 @@
+import React from 'react';
 import Footer from "../components/footer/Footer";
 // import GlobalBanner from "../components/banner/banner-v2/GlobalBanner";
 import NewNavbar from "../components/navbar/Navbar";
@@ -12,9 +13,6 @@ type props = {
 
 const LayoutWithBanner = ({
   children,
-  bgImage,
-  firstElement,
-  secondElement,
 }: props) => {
   return (
     <div className="mx-auto max-w-[1710px]">

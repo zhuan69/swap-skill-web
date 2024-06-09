@@ -4,6 +4,7 @@ import ChangePassword from "../../components/profile/ChangePassword";
 import Back from "../../components/button/Back";
 import { BsChevronLeft } from 'react-icons/bs';
 import GlobalLayout from '../../layouts/GlobalLayout';
+import React from 'react';
 
 const Profile = () => {
     const { file, selectedTab, handleMyProfileClick, handleChangePasswordClick, handleFileChange } = useProfile();

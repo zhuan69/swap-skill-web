@@ -1,11 +1,32 @@
+import React from 'react';
 import topics from '../../components/datadummy/topicsworker';
 import topicsSecond from '../../components/datadummy/topicsworker2';
 import useTopicSelection from '../../hooks/useTopicSelection';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useMutation } from 'react-query';
+import { userRegister } from '../../services/Register';
+
 
 const SelectTag = () => {
     const { selectedTopics, selectedTopicsSecond, toggleTopic } = useTopicSelection();
+    const {state}=useLocation()
+ const {name,email,address,password,status,birthYear,phoneNumber,gender ,selectedOption}=state
 
+const handleRegister = useMutation({
+    mutationFn: () =>
+     userRegister({
+      address: address,
+      birthYear: birthYear,
+      email: email,
+      gender: gender,
+      interests: [...selectedTopics,...selectedTopicsSecond],
+      location: "",
+      name: name,
+      password: password,
+      phone_number: phoneNumber,
+      status: selectedOption.value
+     }),
+   })
     return (
         <>
             <div style={{ backgroundImage: "url('/sharing2.jpg')", filter: 'brightness(0.5)' }} className="absolute inset-0 w-auto "></div>
@@ -44,7 +65,7 @@ const SelectTag = () => {
                         </div>
                     </form>
                     <div className="flex flex-col">
-                        <button
+                        <button onClick={()=>handleRegister.mutate()}
                             type="button"
                             className="bg-[#007DFA] w-[300px] text-white text-center font-medium p-3 rounded-md hover:bg-[#3390ed]"
                         >

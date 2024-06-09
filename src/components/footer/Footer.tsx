@@ -1,3 +1,4 @@
+import React from 'react';
 import "../footer/footer.css";
 // import useFooter from "../../hooks/useFooter";
 

@@ -1,3 +1,4 @@
+import React from 'react'
 import CardSearch from '../../components/search/CardSearch'
 import GlobalLayout from '../../layouts/GlobalLayout'
 

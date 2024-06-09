@@ -1,10 +1,11 @@
+import React from 'react';
 import topics from '../../components/datadummy/topicsstudent';
 import topicsSecond from '../../components/datadummy/topicsstudent2';
 import useTopicSelection from '../../hooks/useTopicSelection';
 
 const SelectTag = () => {
     const { selectedTopics, selectedTopicsSecond, toggleTopic } = useTopicSelection();
-
+    
     return (
         <>
             <div style={{ backgroundImage: "url('/sharing2.jpg')", filter: 'brightness(0.5)' }} className="absolute inset-0 w-auto "></div>

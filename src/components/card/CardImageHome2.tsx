@@ -16,7 +16,7 @@ const CardImageHome = () => {
                     </button>
                 </div>
                 <div className='w-[700px]'>
-                    <img src="/home2.png" alt="image" className='' />
+                    <img src="/home2.png" alt="home" className='' />
                 </div>
             </div>
         </>

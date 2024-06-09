@@ -1,3 +1,4 @@
+import React from 'react';
 import { server } from "../config/server";
 
 type Props = {

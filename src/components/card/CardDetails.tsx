@@ -32,7 +32,7 @@ const CardDetails = () => {
                             <img
                                 className="w-[150px] h-[150px] mb-3 mt-7 rounded-full shadow-lg"
                                 src={card.imageUrl}
-                                alt={`Card ${card.id} image`}
+                                alt={`Card ${card.id} `}
                             />
                             <div className="text-left ml-4">
                                 <h1 className='text-xl font-bold flex items-center'>

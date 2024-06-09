@@ -3,10 +3,11 @@ import NewNavbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 
 type props = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
-const GlobalLayout = ({ children }: props) => {
+const GlobalLayout = (props:props) => {
+  const{children}=props
   return (
     <div className="mx-auto max-w-[1710px]">
       <NewNavbar />

@@ -1,5 +1,6 @@
 import { FaStar } from "react-icons/fa";
 import cardDataSwap from '../datadummy/CardDataSwap'
+import React from 'react';
 
 const CardSwapRecomen = () => {
     return (
@@ -11,7 +12,7 @@ const CardSwapRecomen = () => {
                             <img
                                 className="w-[150px] h-[150px] mb-3 mt-7 rounded-full shadow-lg"
                                 src={card.imageUrl}
-                                alt={`Card ${card.id} image`}
+                                alt={`Card ${card.id} `}
                             />
                             <h1 className='text-xl font-bold'>
                                 {card.name}
