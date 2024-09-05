@@ -22,16 +22,33 @@ const CardSwapRecomen = () => {
             </div>
         );
     }
-    const data = swapRecommendationState.responseData.data
+    let data = []
+    if (swapRecommendationState.responseData) {
+        data = swapRecommendationState.responseData.data || []
+    }
     const requestSwap = async (targetId: number) => {
-        const result = await swapRequest(targetId)
-        if (result.data) {
+        try {
+            const result = await swapRequest(targetId)
+            if (result.data) {
+                Swal.fire({
+                    title: "Request Swap",
+                    text: "Swap is Requested waiting approval",
+                    timer: 2000
+                })
+                navigate("/home")
+                return
+            }
+        } catch (e) {
             Swal.fire({
                 title: "Request Swap",
-                text: "Swap is Requested waiting approval",
-                timer: 2000
+                text: "Error request swap",
+                timer: 2000,
+                icon: "error"
+            }).then((val) => {
+                if (val.isDismissed || val.isConfirmed) {
+                    window.location.reload()
+                }
             })
-            navigate("/home")
         }
     }
     return (

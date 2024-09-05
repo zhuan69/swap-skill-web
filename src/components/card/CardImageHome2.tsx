@@ -11,7 +11,7 @@ const CardImageHome = () => {
         <>
             <div className='flex justify-center mb-20 items-center mt-10 bg-white rounded-2xl shadow-2xl'>
                 <div className='w-[450px] font-bold'>
-                    <h1 className=' text-3xl'>You can selling course with teach other</h1>
+                    <h1 className='text-3xl'>You can selling course with teach other</h1>
                     <p className='mt-5 text-gray-500'>find your new oppurtunity, and learn much you want introduction
                         this feature allow you teach each other so they can learn the same skills they want
                     </p>

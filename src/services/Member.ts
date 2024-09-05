@@ -28,6 +28,9 @@ export async function swapRequest(targetMemberId: number): Promise<any> {
     const response: AxiosResponse<any> = await BaseUrl.get(
         `${baseUrlMemberSwap}/request/${targetMemberId}`
     )
+    if (response.status > 399) {
+        return null
+    }
     const data: AxiosResponse<any> = response
     return data.data
 }

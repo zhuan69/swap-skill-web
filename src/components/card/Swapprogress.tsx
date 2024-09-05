@@ -55,6 +55,17 @@ const Swapprogress = (props: any) => {
                     window.location.reload()
                 }
             })
+        }).catch((e) => {
+            Swal.fire({
+                title: "Error",
+                text: "Error Update Status Swap",
+                timer: 2000,
+                icon: 'error'
+            }).then((val) => {
+                if (val.isDismissed || val.isConfirmed) {
+                    window.location.reload()
+                }
+            })
         })
     }
     let firstDisabledIfNotSame = false
@@ -80,14 +91,12 @@ const Swapprogress = (props: any) => {
                 })
             }
         }).catch((e) => {
-            if (e.response) {
-                Swal.fire({
-                    title: "Error",
-                    text: e.response.message,
-                    timer: 2000
-                })
-                return
-            }
+            Swal.fire({
+                title: "Error",
+                text: "Error finish swap",
+                timer: 2000
+            })
+            return
         })
 
     }
@@ -106,14 +115,12 @@ const Swapprogress = (props: any) => {
                 })
             }
         }).catch((e) => {
-            if (e.response) {
-                Swal.fire({
-                    title: "Error",
-                    text: e.response.message,
-                    timer: 2000
-                })
-                return
-            }
+            Swal.fire({
+                title: "Error",
+                text: "Error Approve Swap",
+                timer: 2000
+            })
+            return
         })
     }
 

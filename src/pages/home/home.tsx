@@ -13,7 +13,7 @@ const Home = () => {
     return (
         <div className='bg-slate-200'>
             <GlobalLayout>
-                <div className='max-w-[1500px] mx-10'>
+                <div className='max-w-[100%] mx-10'>
                     {token !== null &&
                         <CardRecomenHome />
                     }
